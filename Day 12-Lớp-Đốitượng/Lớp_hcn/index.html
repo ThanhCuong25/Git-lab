@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <canvas id="myCanvas" style="width: 90%; height: 90vh; border: 1px solid;">
+
+    </canvas>
+</body>
+<script>
+  
+
+    class Rectangle {
+        constructor(width, height) {
+            this.width = width;
+            this.height = height;
+        }
+        getShcn() {
+            return this.width * this.height;
+        }
+        getChcn() {
+            return (this.width + this.height) * 2;
+        }
+        draw() {
+            let canvas = document.getElementById("myCanvas");
+            let ctx = canvas.getContext("2d");
+            ctx.fillStyle = "red";
+            ctx.fillRect(0,0 , this.width, this.height);
+        }
+    }
+
+    let rectangleObj = new Rectangle(200, 100)
+    console.log(rectangleObj);
+    console.log(rectangleObj.getChcn());
+    console.log(rectangleObj.getShcn());
+   rectangleObj.draw();
+</script>
+
+</html>
